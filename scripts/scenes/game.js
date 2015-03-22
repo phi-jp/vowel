@@ -190,11 +190,16 @@ tm.define("JudgeScene", {
 
         this.img.tweener
             .clear()
-            .scale(1, 500, "easeOutElastic")
+            .scale(1, 250, "easeOutElastic")
             .wait(500)
             .call(function() {
                 this.app.popScene();
             }, this)
             ;
+    },
+
+    onpointingstart: function() {
+        this.app.popScene();
     }
 });
+
